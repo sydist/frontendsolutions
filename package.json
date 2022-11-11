@@ -2,6 +2,10 @@
 	"author": "Sydist",
 	"bugs": "<https://github.com/sydist/fm-solutions/issues>",
 	"description": "My personal solutions to <https://frontendmentor.io>'s challenges.",
+	"devDependencies":
+	{
+		"astro": "^1.6.7"
+	},
 	"homepage": "<https://sydist.github.io/fm-solutions>",
 	"keywords": [ "Astro", "Challenge", "Frontend", "Mentor", "HTML", "CSS", "JavaScript" ],
 	"license": "MIT",

@@ -1,0 +1,13 @@
+{
+	"author": "Sydist",
+	"bugs": "<https://github.com/sydist/fm-solutions/issues>",
+	"description": "My personal solutions to <https://frontendmentor.io>'s challenges.",
+	"homepage": "<https://sydist.github.io/fm-solutions>",
+	"keywords": [ "Astro", "Challenge", "Frontend", "Mentor", "HTML", "CSS", "JavaScript" ],
+	"license": "MIT",
+	"main": "index.js",
+	"name": "fm-solutions",
+	"repository": "<https://github.com/sydist/fm-solutions>",
+	"scripts": {},
+	"version": "0.0.0"
+}

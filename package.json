@@ -21,7 +21,8 @@
 	"name": "fm-solutions",
 	"repository": "<https://github.com/sydist/fm-solutions>",
 	"scripts": {
-		"build": "npx astro build && npx html-minifier --input-dir dist --output-dir dist --file-ext html -c html-minifier.json"
+		"build": "npx astro build && npm run minify",
+		"minify": "npx html-minifier --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --no-include-auto-generated-tags --prevent-attributes-escaping --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype --input-dir dist --output-dir dist --file-ext html"
 	},
 	"version": "0.0.0"
 }

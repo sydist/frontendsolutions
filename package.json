@@ -1,7 +1,7 @@
 {
 	"author": "Sydist",
 	"bugs": "<https://github.com/sydist/fm-solutions/issues>",
-	"description": "My personal solutions to <https://frontendmentor.io>'s challenges.",
+	"description": "Solutions to Frontend Mentor's challenges.",
 	"devDependencies":
 	{
 		"astro": "^1.6.7"

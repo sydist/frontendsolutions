@@ -1,0 +1,43 @@
+---
+import Page from "@layouts/page.astro";
+import QrCode from "@components/qr-code.astro";
+---
+
+<style>
+	body
+	{
+		font-family: 'Outfit', sans-serif;
+		background: hsl(212, 45%, 89%);
+
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+		margin: 0;
+
+		text-rendering: optimizeSpeed;
+		shape-rendering: optimizeSpeed;
+		image-rendering: pixelated;
+	}
+
+	h1, p
+	{
+		margin: 0;
+	}
+
+	img
+	{
+		display: block;
+		max-width: 100%;
+	}
+</style>
+
+<Page title="QR Code Component">
+	<Fragment slot="head">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+	</Fragment>
+	<main>
+		<QrCode />
+	</main>
+</Page>

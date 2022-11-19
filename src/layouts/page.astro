@@ -1,4 +1,18 @@
-<style>
+<html lang="en">
+	<head>
+		<title>{ Astro.props.title }</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<slot name="head" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
 	body
 	{
 		min-height: 100vh;
@@ -20,19 +34,3 @@
 		max-width: 100%;
 	}
 </style>
-
-<html lang="en">
-	<head>
-		<title>{ Astro.props.title }</title>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-
-		<slot name="head" />
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
-
-

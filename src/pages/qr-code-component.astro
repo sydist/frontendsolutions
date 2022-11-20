@@ -1,18 +1,7 @@
 ---
 import Page from "@layouts/page.astro";
-import QrCode from "@components/qr-code.astro";
+import QRCodeCard from "@components/qr-code-card.astro";
 ---
-
-
-<style>
-	body {
-		font-family: 'Outfit', sans-serif;
-		background: hsl(212, 45%, 89%);
-
-		display: grid;
-		place-items: center;
-	}
-</style>
 
 <Page title="QR Code Component">
 	<Fragment slot="head">
@@ -21,6 +10,17 @@ import QrCode from "@components/qr-code.astro";
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 	</Fragment>
 	<main>
-		<QrCode />
+		<QRCodeCard />
 	</main>
 </Page>
+
+<style is:global>
+	body {
+		font-family: 'Outfit', sans-serif;
+		background: hsl(212, 45%, 89%);
+
+		display: grid;
+		place-items: center;
+		color: hsl(220, 15%, 55%);
+	}
+</style>

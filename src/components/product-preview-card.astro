@@ -1,0 +1,114 @@
+<article>
+	<picture>
+		<source
+		media="(min-width: 768px)"
+		srcset="/frontendsolutions/product@desktop.jpg,
+				/frontendsolutions/product@desktop_2x.jpg 2x"
+		>
+
+		<source
+		media="(max-width: 767px)"
+		srcset="/frontendsolutions/product@mobile.jpg,
+				/frontendsolutions/product@mobile_2x.jpg 2x"
+		>
+
+		<img src="/frontendsolutions/product@mobile.jpg" alt="A Gabrielle CHANEL perfume.">
+	</picture>
+	<header>
+		<small>PERFUME</small>
+		<h1>Gabrielle Essence Eau De Parfum</h1>
+		<p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+
+		<div>
+			<ins>$149.99</ins>
+			<del>$169.99</del>
+		</div>
+
+		<button>Add to Cart</button>
+	</header>
+</article>
+
+<style>
+	article
+	{
+		background: #fff;
+		border-radius: 10px;
+		max-width: 21.56rem;
+		overflow: hidden;
+	}
+
+	header
+	{
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+		font-size: 0.89rem;
+		padding: 25px;
+		gap: 12px;
+	}
+
+	small
+	{
+		font-size: 0.75rem;
+		letter-spacing: 0.4em;
+	}
+
+	ins
+	{
+		color: hsl(158, 36%, 37%);
+		font-family: 'Fraunces', serif;
+		font-size: 2rem;
+		margin-right: 0.4em;
+		text-decoration: none;
+	}
+
+	button::before
+	{
+		content: url("/frontendsolutions/cart.svg");
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+		width: 15px;
+	}
+
+	button
+	{
+		font-size: 1em;
+		display: inline-block;
+		background-color: hsl(158, 36%, 37%);
+		border-radius: 10px;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-family: inherit;
+		font-weight: 700;
+		transition: all .3s;
+		padding: 14.5px 0;
+		width: 100%;
+	}
+
+	button:hover,
+	button:focus-visible
+	{
+		background: hsl(158, 36%, 17%);
+	}
+
+	@media (min-width: 768px)
+	{
+		article
+		{
+			max-width: 600px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			max-height: 450px;
+			box-sizing: border-box;
+		}
+
+		header
+		{
+			gap: 20px;
+			padding: 0 32px;
+		}
+	}
+</style>

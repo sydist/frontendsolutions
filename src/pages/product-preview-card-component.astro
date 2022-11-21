@@ -1,0 +1,39 @@
+---
+import Page from "@layouts/page.astro";
+import ProductPreviewCard from "@components/product-preview-card.astro";
+---
+
+<Page title="Prodcut Preview Card Component">
+	<Fragment slot="head">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	</Fragment>
+	<main>
+		<ProductPreviewCard />
+	</main>
+</Page>
+
+<style is:global>
+	body {
+		font-family: 'Montserrat', sans-serif;
+		background: hsl(30, 38%, 92%);
+
+		display: grid;
+		place-items: center;
+		color: hsl(228, 12%, 48%);
+		line-height: 1.6;
+	}
+
+	h1, h2, h3
+	{
+		font-family: 'Fraunces', serif;
+		color: hsl(212, 21%, 14%);
+		line-height: 1;
+	}
+
+	h1
+	{
+		font-size: 2rem;
+	}
+</style>

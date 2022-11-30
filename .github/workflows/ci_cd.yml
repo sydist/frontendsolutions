@@ -18,13 +18,10 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm i
+        run: npm install
 
-      - name: Build source
-        run: npm run build
-
-      - name: Minify source
-        run: npm run minify
+      - name: Build for production
+        run: npm run build:production
 
       - name: Upload artifacts for Github Pages
         uses: actions/upload-pages-artifact@v1

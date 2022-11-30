@@ -1,12 +1,11 @@
 {
 	"author": "Sydist",
-	"bugs": "<https://github.com/sydist/fm-solutions/issues>",
 	"description": "Solutions to Frontend Mentor's challenges.",
 	"devDependencies": {
-		"astro": "^1.6.7",
-		"html-minifier": "^4.0.0"
+		"astro": "^1.6.11",
+		"html-minifier-terser": "^7.1.0"
 	},
-	"homepage": "<https://sydist.github.io/fm-solutions>",
+	"homepage": "<https://sydist.github.io/frontendsolutions>",
 	"keywords": [
 		"Astro",
 		"Challenge",
@@ -17,14 +16,11 @@
 		"JavaScript"
 	],
 	"license": "MIT",
-	"main": "index.js",
-	"name": "fm-solutions",
-	"repository": "<https://github.com/sydist/fm-solutions>",
+	"repository": "<https://github.com/sydist/frontendsolutions>",
 	"scripts": {
-		"build:full": "npm run build && npm run minify",
-		"start": "npx astro dev --base /frontendsolutions",
-		"build": "npx astro build --base /frontendsolutions",
-		"minify": "npx html-minifier --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --no-include-auto-generated-tags --prevent-attributes-escaping --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --sort-attributes --sort-class-name --trim-custom-fragments --use-short-doctype --input-dir dist --output-dir dist --file-ext html"
-	},
-	"version": "0.0.0"
+		"build:production": "npm run build && npm run minify",
+		"start": "astro dev --base /frontendsolutions",
+		"build": "astro build --base /frontendsolutions",
+		"minify": "html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --input-dir dist --output-dir dist --file-ext html"
+	}
 }

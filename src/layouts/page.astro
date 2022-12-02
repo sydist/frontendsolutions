@@ -1,3 +1,7 @@
+---
+import "@styles/global.css"
+---
+
 <html lang="en">
 	<head>
 		<title>{ Astro.props.title }</title>
@@ -6,6 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="generator" content={ Astro.generator } />
 		<meta name="author" content="sydist">
+		<meta name="application" content="Frontend Solutions">
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 		<link rel="icon" type="image/png" href="/favicon.png">
@@ -16,27 +21,3 @@
 		<slot />
 	</body>
 </html>
-
-<style is:global>
-	body
-	{
-		min-height: 100vh;
-		margin: 0;
-
-		text-rendering: optimizeSpeed;
-		shape-rendering: optimizeSpeed;
-		image-rendering: pixelated;
-	}
-
-	h1, h2, h3, p
-	{
-		margin: 0;
-	}
-
-	img, picture
-	{
-		display: block;
-		max-width: 100%;
-	}
-
-</style>

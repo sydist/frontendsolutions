@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+img,
+picture,
+video,
+canvas,
+svg
+{
+    display: block;
+    max-width: 100%;
+}
+
+pre,
+input,
+select,
+button,
+textarea
+{
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+body,
+dl, ol, ul, dd,
+pre, textarea, button,
+p, h1, h2, h3, h4, h5, h6,
+figure, blockquote, fieldset, legend
+{
+    margin: 0;
+}
+
+ul, ol
+{
+    padding: 0;
+    list-style: "\200B";
+}
+
+html
+{
+	min-height: 100vh;
+	font-family: body, sans-serif;
+
+	text-rendering: optimizeSpeed;
+	shape-rendering: optimizeSpeed;
+	image-rendering: pixelated;
+}
+
+h1, h2, h3
+{
+	font-family: heading, serif;
+}

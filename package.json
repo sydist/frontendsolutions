@@ -2,7 +2,7 @@
 	"author": "Sydist",
 	"description": "Solutions to Frontend Mentor's challenges.",
 	"devDependencies": {
-		"astro": "^1.6.11",
+		"astro": "^1.6.12",
 		"html-minifier-terser": "^7.1.0"
 	},
 	"homepage": "<https://sydist.github.io/frontendsolutions>",
@@ -21,6 +21,7 @@
 		"build:production": "npm run build && npm run minify",
 		"start": "astro dev --base /frontendsolutions",
 		"build": "astro build --base /frontendsolutions",
+		"preview": "astro preview --base /frontendsolutions",
 		"minify": "html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --input-dir dist --output-dir dist --file-ext html"
 	}
 }

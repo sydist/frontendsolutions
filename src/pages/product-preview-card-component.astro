@@ -5,6 +5,31 @@ import ProductPreviewCard from "@components/product-preview-card.astro";
 
 <Page title="Prodcut Preview Card Component">
 	<Fragment slot="head">
+		<!-- 	<source
+		media="(min-width: 768px)"
+		srcset="/frontendsolutions/product@desktop.jpg,
+				/frontendsolutions/product@desktop_2x.jpg 2x"
+		>
+
+		<source
+		media="(max-width: 767px)"
+		srcset="/frontendsolutions/product@mobile.jpg,
+				/frontendsolutions/product@mobile_2x.jpg 2x"
+		> -->
+
+
+		<link rel="preload"
+			as="image"
+			media="(min-width: 768px)"
+			href="/frontendsolutions/product@desktop_2x.jpg"
+			imageSrcSet="/frontendsolutions/product@desktop.jpg, /frontendsolutions/product@desktop_2x.jpg 2x">
+
+		<link rel="preload"
+			as="image"
+			media="(max-width: 767px)"
+			href="/frontendsolutions/product@mobile_2x.jpg"
+			imageSrcSet="/frontendsolutions/product@mobile.jpg, /frontendsolutions/product@mobile_2x.jpg 2x">
+
 		<link rel="preload" href="/frontendsolutions/fonts/monsterrat/400.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/frontendsolutions/fonts/monsterrat/700.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/frontendsolutions/fonts/fraunces/700.woff2" as="font" type="font/woff2" crossorigin>

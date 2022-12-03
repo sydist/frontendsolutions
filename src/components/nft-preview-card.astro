@@ -1,0 +1,125 @@
+<article class="card">
+	<a class="card__image" href="#" aria-label="View Equilibrium">
+		<img src="/frontendsolutions/nft-preview-card-component/equilibrium.jpg" alt="A reflective cube placed balancing on one of its edges.">
+	</a>
+	<header class="card__intro">
+		<h1>
+			<a href="#">Equilibrium #3429</a>
+		</h1>
+		<p>Our Equilibrium collection promotes balance and calm.</p>
+		<div class="card__intro__split">
+			<p class="card__intro__price">0.041 <abbr title="Ether">ETH</abbr></p>
+			<time datetime="3D" class="card__intro__time">3 days left</time>
+		</div>
+	</header>
+	<footer class="card__footer">
+		<img class="card__footer__avatar" src="/frontendsolutions/nft-preview-card-component/avatar.png" alt="">
+		<p>Creation of <a href="#">Jules Wyvern</a></p>
+	</footer>
+</article>
+
+<style is:global>
+	.card
+	{
+		margin: 2rem;
+		background-color: #14253d;
+
+		box-sizing: border-box;
+		max-width: 20.5rem;
+		padding: 25px;
+		border-radius: 16px;
+	}
+
+	.card__image
+	{
+		display: block;
+		border-radius: 8px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.card__image::before
+	{
+		content: url("/frontendsolutions/nft-preview-card-component/view.svg");
+		padding: 7rem;
+		position: absolute;
+		inset: 0;
+
+		transform: scale(2) rotate(15deg);
+		background-color: #00fff7AA;
+		transition: all 325ms;
+		opacity: 0;
+	}
+
+
+	.card__image:hover::before
+	{
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
+
+
+	.card__intro
+	{
+		margin-top: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+	}
+
+	.card__intro__split
+	{
+
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.9375rem;
+	}
+
+	abbr
+	{
+		text-decoration: none;
+	}
+
+	.card__intro__price
+	{
+		color: #00fff7;
+	}
+
+	.card__intro__price::before,
+	.card__intro__time::before
+	{
+		vertical-align: text-top;
+		margin-right: 0.5em;
+	}
+
+	.card__intro__price::before
+	{
+		content: url("/frontendsolutions/nft-preview-card-component/ethereum.svg");
+
+	}
+
+	.card__intro__time::before
+	{
+		content: url("/frontendsolutions/nft-preview-card-component/clock.svg");
+	}
+
+
+
+	.card__footer
+	{
+		margin-top: 0.6rem;
+		border-top: 1px solid #2f415b;
+		padding-top: 0.85rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-size: 0.9375rem;
+	}
+
+	.card__footer__avatar
+	{
+		max-width: 2rem;
+		border: 1px solid #fff;
+		border-radius: 50%;
+	}
+</style>

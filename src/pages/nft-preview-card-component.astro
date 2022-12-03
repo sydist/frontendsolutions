@@ -1,0 +1,67 @@
+---
+import Page from "@layouts/page.astro";
+import NFTPreviewCard from "@components/nft-preview-card.astro";
+---
+
+<Page title="NFT Preview Card Component">
+	<Fragment slot="head">
+		<link rel="preload" href="/frontendsolutions/nft-preview-card-component/equilibrium.jpg" as="image" >
+		<link rel="preload" href="/frontendsolutions/fonts/outfit/400.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/frontendsolutions/fonts/outfit/600.woff2" as="font" type="font/woff2" crossorigin>
+	</Fragment>
+	<main>
+		<NFTPreviewCard />
+	</main>
+</Page>
+
+<style is:global>
+	@font-face
+	{
+		font-family: body;
+		src:local("Outfit"),
+			url("/frontendsolutions/fonts/outfit/400.woff2") format("woff2"),
+			url("/frontendsolutions/fonts/outfit/400.woff") format("woff");
+		font-weight: 400;
+	}
+
+	@font-face
+	{
+		font-family: heading;
+		src:local("Outfit Bold"),
+			url("/frontendsolutions/fonts/outfit/600.woff2") format("woff2"),
+			url("/frontendsolutions/fonts/outfit/600.woff") format("woff");
+		font-weight: 700;
+	}
+
+	html {
+		background: #0d192b;
+		color: #8bacda;
+
+		display: grid;
+		place-items: center;
+		line-height: 1.65;
+	}
+
+	h1, h2, h3
+	{
+		color: #fff;
+	}
+
+	h1
+	{
+		font-size: 1.375rem;
+		line-height: 1;
+	}
+
+	a
+	{
+		color: #fff;
+		text-decoration: none;
+		transition: color 350ms ease;
+	}
+
+	a:hover
+	{
+		color: #00fff7;
+	}
+</style>

@@ -1,0 +1,90 @@
+---
+import Radio from "./radio.astro";
+import Button from "./button.astro";
+import Card from "./card.astro";
+---
+
+<Card>
+	<img class="card__rating-icon" src="interactive-rating-component/icon-star.svg" alt="">
+	<h1>How did we do?</h1>
+	<p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+	<form method="POST" id="card__rating-form">
+		<fieldset class="card__rating-options">
+			<Radio name="rating" value="1" id="horrible"/>
+			<Radio name="rating" value="2" id="bad"/>
+			<Radio name="rating" value="3" id="fine"/>
+			<Radio name="rating" value="4" id="good"/>
+			<Radio name="rating" value="5" id="fantastic"/>
+		</fieldset>
+		<Button>SUBMIT</Button>
+	</form>
+</Card>
+
+<Card>
+	<img class="submit-card__illustration" src="interactive-rating-component/illustration-thank-you.svg" alt="">
+	<output class="submit-card__output"></output>
+	<h1>Thank you!</h1>
+	<p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+</Card>
+
+<style is:global>
+    .card__rating-icon
+	{
+		max-width: 1rem;
+		padding: 1rem;
+		border-radius: 50%;
+		background-color: var(--clr-neutral-200);
+	}
+
+	#card__rating-form
+	{
+		display: contents;
+	}
+
+	.card__rating-options
+	{
+		display: flex;
+		justify-content: space-between;
+		gap: .5rem;
+		border: 0;
+		padding: 0;
+	}
+
+	.card:last-child
+	{
+		display: none;
+		align-items: center;
+
+		text-align: center;
+	}
+
+	.submit-card__illustration
+	{
+		max-width: 10.5rem;
+	}
+
+	.submit-card__output
+	{
+
+		background-color: var(--clr-neutral-200);
+		color: var(--clr-primary-400);
+		border-radius: 9999px;
+		padding: 0.25rem 1rem;
+	}
+</style>
+
+<script>
+	const ratingCard = document.querySelector(".card:first-child");
+	const submitCard = document.querySelector(".card:last-child");
+	const output = document.querySelector(".submit-card__output");
+	const form = document.getElementById("card__rating-form");
+
+	form.addEventListener('submit', (event) =>
+	{
+        event.preventDefault();
+
+		output.innerText = `You selected ${form.rating.value} out of 5`;
+		ratingCard.style.display = "none";
+		submitCard.style.display = "flex";
+    });
+</script>

@@ -1,0 +1,53 @@
+---
+const { name, value, id } = Astro.props;
+---
+
+<>
+	<input class="radio-btn visually-hidden" type="radio" name={ name } id={ id ?? value } value={ value } required>
+	<label class="radio-label" for={ id ?? value }>{ value }</label>
+</>
+
+<style>
+	.radio-label
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		aspect-ratio: 1;
+		max-width: 3em;
+		font-size: 1rem;
+
+		background-color: var(--clr-neutral-200);
+		border-radius: 50%;
+		flex: 1;
+
+		cursor: pointer;
+		transition: background-color 300ms, color 300ms, transform 150ms;
+	}
+
+	.radio-btn:checked + .radio-label
+	{
+		background-color: var(--clr-primary-400);
+		color: var(--clr-neutral-900);
+	}
+
+	.radio-label:hover
+	{
+		background-color: var(--clr-neutral-500);
+		color: var(--clr-neutral-900);
+	}
+
+	.radio-btn:focus-visible + .radio-label
+	{
+		outline: 2px solid var(--clr-primary-400);
+		outline-offset: 4px;
+	}
+
+	.radio-btn:active + .radio-label
+	{
+		transform: scale(0.925);
+
+	}
+
+</style>

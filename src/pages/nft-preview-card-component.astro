@@ -5,9 +5,9 @@ import NFTPreviewCard from "@components/nft-preview-card.astro";
 
 <Page title="NFT Preview Card Component">
 	<Fragment slot="head">
-		<link rel="preload" href="/frontendsolutions/nft-preview-card-component/equilibrium.webp" as="image" >
-		<link rel="preload" href="/frontendsolutions/fonts/outfit/400.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/frontendsolutions/fonts/outfit/600.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="nft-preview-card-component/equilibrium.webp" as="image" >
+		<link rel="preload" href="fonts/outfit/400.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/outfit/600.woff2" as="font" type="font/woff2" crossorigin>
 	</Fragment>
 	<main>
 		<NFTPreviewCard />
@@ -19,8 +19,8 @@ import NFTPreviewCard from "@components/nft-preview-card.astro";
 	{
 		font-family: body;
 		src:local("Outfit"),
-			url("/frontendsolutions/fonts/outfit/400.woff2") format("woff2"),
-			url("/frontendsolutions/fonts/outfit/400.woff") format("woff");
+			url("fonts/outfit/400.woff2") format("woff2"),
+			url("fonts/outfit/400.woff") format("woff");
 		font-weight: 400;
 	}
 
@@ -28,8 +28,8 @@ import NFTPreviewCard from "@components/nft-preview-card.astro";
 	{
 		font-family: heading;
 		src:local("Outfit Bold"),
-			url("/frontendsolutions/fonts/outfit/600.woff2") format("woff2"),
-			url("/frontendsolutions/fonts/outfit/600.woff") format("woff");
+			url("fonts/outfit/600.woff2") format("woff2"),
+			url("fonts/outfit/600.woff") format("woff");
 		font-weight: 700;
 	}
 

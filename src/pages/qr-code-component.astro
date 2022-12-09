@@ -5,9 +5,9 @@ import QRCodeCard from "@components/qr-code-card.astro";
 
 <Page title="QR Code Component">
 	<Fragment slot="head">
-		<link rel="preload" href="/frontendsolutions/qr-code-component/qr-code.png" as="image" >
-		<link rel="preload" href="/frontendsolutions/fonts/outfit/400.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/frontendsolutions/fonts/outfit/700.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="qr-code-component/qr-code.png" as="image" >
+		<link rel="preload" href="fonts/outfit/400.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/outfit/700.woff2" as="font" type="font/woff2" crossorigin>
 	</Fragment>
 	<main>
 		<QRCodeCard />
@@ -19,8 +19,8 @@ import QRCodeCard from "@components/qr-code-card.astro";
 	{
 		font-family: body;
 		src:local("Outfit"),
-			url("/frontendsolutions/fonts/outfit/400.woff2") format("woff2"),
-			url("/frontendsolutions/fonts/outfit/400.woff") format("woff");
+			url("fonts/outfit/400.woff2") format("woff2"),
+			url("fonts/outfit/400.woff") format("woff");
 		font-weight: 400;
 	}
 
@@ -28,8 +28,8 @@ import QRCodeCard from "@components/qr-code-card.astro";
 	{
 		font-family: heading;
 		src:local("Outfit Bold"),
-			url("/frontendsolutions/fonts/outfit/700.woff2") format("woff2"),
-			url("/frontendsolutions/fonts/outfit/700.woff") format("woff");
+			url("fonts/outfit/700.woff2") format("woff2"),
+			url("fonts/outfit/700.woff") format("woff");
 		font-weight: 700;
 	}
 

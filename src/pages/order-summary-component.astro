@@ -1,0 +1,106 @@
+---
+import Page from "@layouts/page.astro";
+import OrderSummary from "@components/order-summary-component/order-summary.astro";
+---
+
+<Page title="Order Summary Component">
+	<Fragment slot="head">
+		<link rel="preload" href="nft-preview-card-component/equilibrium.webp" as="image" >
+		<link rel="preload" href="fonts/red_hat_display/500.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/red_hat_display/700.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/red_hat_display/900.woff2" as="font" type="font/woff2" crossorigin>
+	</Fragment>
+	<main>
+		<OrderSummary />
+	</main>
+</Page>
+
+<style is:global>
+	@font-face
+	{
+		font-family: body;
+		src:
+			url("/frontendsolutions/fonts/red_hat_display/500.woff2") format("woff2"),
+			url("/frontendsolutions/fonts/red_hat_display/500.woff") format("woff");
+		font-weight: 500;
+	}
+
+	@font-face
+	{
+		font-family: body;
+		src:
+			url("/frontendsolutions/fonts/red_hat_display/700.woff2") format("woff2"),
+			url("/frontendsolutions/fonts/red_hat_display/700.woff") format("woff");
+		font-weight: 700;
+	}
+
+	@font-face
+	{
+		font-family: body;
+		src:
+			url("/frontendsolutions/fonts/red_hat_display/900.woff2") format("woff2"),
+			url("/frontendsolutions/fonts/red_hat_display/900.woff") format("woff");
+		font-weight: 900;
+	}
+
+	html {
+		--clr-primary-900: hsl(225, 100%, 94%);
+		--clr-primary-400: hsl(245, 75%, 52%);
+		--clr-primary-400a750: hsl(245, 75%, 52%, 0.75);
+		--clr-primary-400a125: hsl(245, 75%, 52%, 0.125);
+
+		--clr-neutral-200: hsl(223, 47%, 23%);
+		--clr-neutral-200a025: hsl(223, 47%, 23%, 0.025);
+		--clr-neutral-400: hsl(224, 23%, 55%);
+		--clr-neutral-900: hsl(225, 100%, 98%);
+
+		background-color: var(--clr-primary-900);
+		background-image: url("/frontendsolutions/order-summary-component/pattern-background-mobile.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		color: var(--clr-neutral-400);
+
+		display: grid;
+		place-items: center;
+		line-height: 1.6;
+		font-weight: 500;
+	}
+
+	body
+	{
+		font-size: 0.9375rem;
+	}
+
+	h1, h2, h3
+	{
+		line-height: 1;
+		color: hsl(223, 47%, 23%);
+		font-weight: 900;
+	}
+
+	h1
+	{
+		font-size: 1.375rem;
+	}
+
+	@media (min-width: 768px)
+	{
+		html
+		{
+			background-image: url("/frontendsolutions/order-summary-component/pattern-background-desktop.svg");
+		}
+
+		body
+		{
+			font-size: 1rem;
+		}
+
+		h1
+		{
+			font-size: 1.75rem;
+		}
+	}
+
+
+</style>

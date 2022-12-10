@@ -1,0 +1,40 @@
+---
+import Card from "./card.astro";
+import Button from "./button.astro";
+import PlanBox from "./plan_box.astro";
+---
+
+<Card>
+	<img src="order-summary-component/illustration-hero.svg" alt="">
+	<header class="card__header">
+		<h1>Order Summary</h1>
+		<p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+		<PlanBox name="Annual Plan" price="$59.99/year"/>
+		<Button class="btn--regular">Proceed to Payment</Button>
+		<Button class="btn--ghost">Cancel Order</Button>
+	</header>
+</Card>
+
+<style is:global>
+	.card__header
+	{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		padding: 2rem 1.5625rem;
+		text-align: center;
+	}
+
+
+	@media (min-width: 768px)
+	{
+		.card__header
+		{
+			gap: 1.8125rem;
+			padding: 50px;
+		}
+	}
+
+</style>

@@ -1,0 +1,48 @@
+---
+import Button from "./button.astro";
+---
+
+<article class="plan-box">
+	<img src="order-summary-component/icon-music.svg" alt="">
+	<div>
+		<p class="plan-name">{ Astro.props.name }</p>
+		<p class="plan-price">{ Astro.props.price }</p>
+	</div>
+	<Button class="btn--link">Change</Button>
+</article>
+
+<style is:global>
+	.plan-box
+	{
+		display: flex;
+		align-items: center;
+		gap: 1.5em;
+
+		background: var(--clr-neutral-200a025);
+		border-radius: 0.5rem;
+		padding: 1rem;
+
+		font-size: 0.875rem;
+	}
+
+	.plan-name
+	{
+		font-weight: 900;
+		color: var(--clr-neutral-200);
+	}
+
+
+	.plan-box > .btn--link
+	{
+		margin-left: auto;
+	}
+
+	@media (min-width: 768px)
+	{
+		.plan-box
+		{
+			font-size: 1rem;
+		}
+	}
+
+</style>

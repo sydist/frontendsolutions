@@ -48,7 +48,7 @@ html
 
 h1, h2, h3
 {
-	font-family: heading, serif;
+	font-family: heading, body, serif;
 }
 
 .visually-hidden

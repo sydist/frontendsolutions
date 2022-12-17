@@ -61,3 +61,13 @@ h1, h2, h3
 	white-space: nowrap;
 	width: 1px;
 }
+
+.border-box-sizing
+{
+	box-sizing: border-box;
+}
+
+.relative
+{
+	position: relative;
+}

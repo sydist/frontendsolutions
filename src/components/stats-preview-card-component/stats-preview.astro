@@ -1,0 +1,115 @@
+---
+import Card from "./card.astro";
+---
+
+<Card>
+	<picture class="card__hero relative">
+		<source media="(min-width: 1280px)" srcset="stats-preview-card-component/image-header-desktop.avif" type="image/avif">
+		<source media="(min-width: 1280px)" srcset="stats-preview-card-component/image-header-desktop.webp" type="image/webp">
+
+		<source media="(max-width: 1279px)" srcset="stats-preview-card-component/image-header-mobile.avif" type="image/avif">
+		<source media="(max-width: 1279px)" srcset="stats-preview-card-component/image-header-mobile.webp" type="image/webp">
+
+		<img src="stats-preview-card-component/image-header-desktop.webp" alt="Happy employees meeting.">
+	</picture>
+	<div class="card__body border-box-sizing">
+		<header class="card__header">
+			<h1>Get <b class="highlight">insights</b> that help your business grow.</h1>
+			<p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+		</header>
+		<footer class="card__footer">
+			<p class="card__footer__text">10k+ companies</p>
+			<p class="card__footer__text">314 templates</p>
+			<p class="card__footer__text">12m+ queries</p>
+		</footer>
+	</div>
+</Card>
+
+<style is:global>
+	.card
+	{
+		background: var(--clr-neutral-100);
+	}
+
+	.card__hero::before
+	{
+		position: absolute;
+		inset: 0;
+		content: "";
+		background: var(--clr-primary-400);
+		filter:  opacity(64%) brightness(52%) saturate(144%);
+	}
+
+
+	.card__body
+	{
+		padding: 3rem 2rem;
+		text-align: center;
+	}
+
+	.card__header,
+	.card__footer
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+
+	.card__footer
+	{
+		margin-top: 2rem;
+		text-transform: uppercase;
+		font-size: 0.8666rem;
+		font-family: "Lexend Deca";
+		color: var(--clr-neutral-900a600);
+		font-weight: 300;
+	}
+
+	.card__footer__text
+	{
+		max-width: min-content;
+	}
+
+	.card__footer__text::first-line
+	{
+		font-family: body;
+		font-size: 1.4666rem;
+		font-weight: 700;
+		color: var(--clr-neutral-900);
+	}
+
+	@media (min-width: 1280px)
+	{
+		.card
+		{
+			display: flex;
+			max-width: 74.0666rem;
+		}
+
+		.card__body
+		{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			order: -1;
+			max-width: 38rem;
+			padding: 5rem;
+			padding-right: 7.5rem;
+			text-align: left;
+		}
+
+		.card__header
+		{
+			gap: 2rem;
+		}
+
+		.card__footer
+		{
+			flex-direction: row;
+			gap: 4.2rem;
+		}
+	}
+</style>

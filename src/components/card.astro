@@ -1,0 +1,28 @@
+<article class="card border-box-sizing">
+	<slot />
+</article>
+
+<style is:global>
+	.card
+	{
+		overflow: hidden;
+
+		transform-origin: center bottom;
+		animation: fadeIn 450ms ease forwards;
+	}
+
+	@keyframes fadeIn
+	{
+		from
+		{
+			transform: translateY(10px);
+			opacity: 0;
+		}
+
+		to
+		{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+</style>

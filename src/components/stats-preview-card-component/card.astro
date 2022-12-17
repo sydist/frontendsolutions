@@ -1,0 +1,16 @@
+---
+import Card from "@components/card.astro";
+---
+
+<Card>
+	<slot />
+</Card>
+
+<style is:global>
+	.card
+	{
+		max-width: 21.875rem;
+		border-radius: 7px;
+		background: var(--clr-neutral-100);
+	}
+</style>

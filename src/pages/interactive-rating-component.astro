@@ -14,77 +14,77 @@ import RatingCard from "@components/interactive-rating-component/rating-card.ast
 </Page>
 
 <style is:global>
-    @font-face
-    {
-    	font-family: body;
-    	src: local("Overpass"),
-    		url("/frontendsolutions/fonts/overpass/400.woff2") format("woff2"),
-    		url("/frontendsolutions/fonts/overpass/400.woff") format("woff");
-    	font-weight: 400;
-    }
+		@font-face
+		{
+			font-family: body;
+			src: local("Overpass"),
+				url("/frontendsolutions/fonts/overpass/400.woff2") format("woff2"),
+				url("/frontendsolutions/fonts/overpass/400.woff") format("woff");
+			font-weight: 400;
+		}
 
-    @font-face
-    {
-    	font-family: heading;
-    	src: local("Overpass Bold"),
-    		url("/frontendsolutions/fonts/overpass/700.woff2") format("woff2"),
-    		url("/frontendsolutions/fonts/overpass/700.woff") format("woff");
-    	font-weight: 700;
-    }
+		@font-face
+		{
+			font-family: heading;
+			src: local("Overpass Bold"),
+				url("/frontendsolutions/fonts/overpass/700.woff2") format("woff2"),
+				url("/frontendsolutions/fonts/overpass/700.woff") format("woff");
+			font-weight: 700;
+		}
 
-    html
-    {
-    	--clr-primary-400: hsl(25, 97%, 53%);
+		html
+		{
+			--clr-primary-400: hsl(25, 97%, 53%);
 
-    	--clr-neutral-900: hsl(0, 0%, 100%);
-    	--clr-neutral-500: hsl(217, 12%, 63%);
-    	--clr-neutral-400: hsl(216, 12%, 54%);
-    	--clr-neutral-200: hsl(213, 19%, 18%);
-    	--clr-neutral-100: hsl(213, 22%, 13%);
-    	--clr-neutral-000: hsl(216, 12%, 8%);
+			--clr-neutral-900: hsl(0, 0%, 100%);
+			--clr-neutral-500: hsl(217, 12%, 63%);
+			--clr-neutral-400: hsl(216, 12%, 54%);
+			--clr-neutral-200: hsl(213, 19%, 18%);
+			--clr-neutral-100: hsl(213, 22%, 13%);
+			--clr-neutral-000: hsl(216, 12%, 8%);
 
-    	background: var(--clr-neutral-000);
-    	display: grid;
-    	place-content: center;
-    	color: var(--clr-neutral-400);
-    	font-size: 0.875rem;
-    	line-height: 1.6;
-    	margin: 0 1rem;
-    }
+			background: var(--clr-neutral-000);
+			display: grid;
+			place-content: center;
+			color: var(--clr-neutral-400);
+			font-size: 0.875rem;
+			line-height: 1.6;
+			margin: 0 1rem;
+		}
 
-    h1, h2, h3
-    {
-    	color: var(--clr-neutral-900);
-    	line-height: 1;
-    }
+		h1, h2, h3
+		{
+			color: var(--clr-neutral-900);
+			line-height: 1;
+		}
 
-    h1
-    {
-    	font-size: 1.675rem;
-    }
+		h1
+		{
+			font-size: 1.675rem;
+		}
 
-    :focus-visible
-    {
-    	outline: 2px solid var(--clr-primary-400);
-    	outline-offset: 4px;
-    }
+		:focus-visible
+		{
+			outline: 2px solid var(--clr-primary-400);
+			outline-offset: 4px;
+		}
 
-    ::selection
-    {
-    	background: var(--clr-neutral-500);
-    	color: var(--clr-neutral-100);
-    }
+		::selection
+		{
+			background: var(--clr-neutral-500);
+			color: var(--clr-neutral-100);
+		}
 
-    @media (min-width: 768px)
-    {
-    	html
-    	{
-    		font-size: 1.0715rem;
-    	}
+		@media (min-width: 768px)
+		{
+			html
+			{
+				font-size: 1.0715rem;
+			}
 
-    	body
-    	{
-    		font-size: 0.875rem
-    	}
-    }
+			body
+			{
+				font-size: 0.875rem
+			}
+		}
 </style>

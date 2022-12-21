@@ -1,0 +1,108 @@
+---
+import Card from "@components/card.astro";
+---
+
+<Card style={Astro.props.style}>
+  <img class="car-card__icon" src={Astro.props.icon} alt="">
+  <h2>{Astro.props.title}</h2>
+  <p>{Astro.props.body}</p>
+  <a class="car-card__button" href="#">Learn More</a>
+</Card>
+
+<style is:global>
+  .card:first-child
+  {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card:last-child
+  {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .card:only-child
+  {
+    border-radius: 0;
+  }
+
+  .card
+  {
+    border-radius: 0;
+    background: var(--bg, black);
+    max-width: 20.5rem;
+    padding: 3.0625rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .car-card__icon
+  {
+    max-width: 4rem;
+  }
+
+  .car-card__button
+  {
+    background: var(--clr-neutral-900);
+    border-radius: 9999px;
+    color: var(--bg, black);
+    display: inline-block;
+    isolation: isolate;
+    max-width: fit-content;
+    outline-offset: -2px;
+    outline: 2px solid var(--clr-neutral-900);
+    padding: 0.8em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 400ms;
+  }
+
+  .car-card__button::before
+  {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    content: "";
+    inset: 0;
+    
+    background: var(--bg);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 400ms ease;
+  }
+
+  .car-card__button:hover
+  {
+    color:var(--clr-neutral-900);
+  }
+
+  .car-card__button:hover::before
+  {    
+    transform: scaleX(1);
+  }  
+
+  @media (min-width: 1024px)
+  {
+    .card
+    {
+      max-width: 308px;
+    }
+    .car-card__button
+    {
+      margin-top: 58px;
+    }
+
+    .card:first-child
+    {
+      border-radius: 8px 0 0 8px ;
+    }
+
+    .card:last-child
+    {
+      border-radius: 0 8px 8px 0 ;
+    }
+  }
+
+</style>

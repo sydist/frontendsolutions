@@ -1,28 +1,28 @@
-<article class="card border-box-sizing">
+<article class="card border-box-sizing" style={Astro.props.style}>
 	<slot />
 </article>
 
 <style is:global>
-	.card
-	{
-		overflow: hidden;
-
-		transform-origin: center bottom;
-		animation: fadeIn 450ms ease forwards;
-	}
-
 	@keyframes fadeIn
 	{
-		from
+		0%
 		{
-			transform: translateY(10px);
+			transform: translateY(12px);
 			opacity: 0;
 		}
 
-		to
+		100%
 		{
 			transform: translateY(0);
 			opacity: 1;
 		}
 	}
+	.card
+	{
+		overflow: hidden;
+		transform-origin: center bottom;
+		animation: fadeIn 450ms ease var(--delay, 0ms) 1 normal forwards;
+		opacity: 0;
+	}
+
 </style>

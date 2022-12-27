@@ -1,0 +1,90 @@
+---
+import Card from "./card.astro";
+---
+
+<Card>
+  <img src="profile-card-component/bg-pattern-card.svg" alt="">
+  <section aria-label="User information" class="profile-card__info">
+    <img class="profile-card__avatar" src="profile-card-component/image-victor.webp" alt="A dark-skinned man with a gray jacket and a white shirt.">
+    <p class="profile-card__about"><span class="profile-card__name">Victor Crest</span> <span>26</span><br><span class="profile-card__location">London</span></p>     
+  </section>
+  <section aria-label="User statistics." class="border-box-sizing profile-card__stats">
+    <p>
+      <b class="stats-item__number">80k</b> Followers
+    </p>
+    <p>
+      <b class="stats-item__number">803k</b> Likes
+    </p>
+    <p>
+      <b class="stats-item__number">1.4k</b> Photos
+    </p>
+  </section>
+</Card>
+
+<style is:global>
+  .card
+  {
+    background: white;
+    border-radius: 16px;
+    max-width: 21.875rem;
+    text-align: center;
+  }
+  
+
+  .profile-card__info
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card__avatar
+  {
+    border-radius: 50%;
+    outline: 5px solid white;
+  }
+
+  .profile-card__about,
+  .profile-card__avatar
+  {
+    transform: translateY(-50%);
+  }  
+
+  .profile-card__name
+  {
+
+    color: var(--clr-neutral-200);
+  }
+
+  .profile-card__location
+  {
+    font-size: 14px;
+  }
+  
+
+  .profile-card__stats
+  {
+    /* margin-top: 5rem; */
+    border-top: 1px solid var(--clr-neutral-400);
+    padding: 1.75rem 3rem;
+
+    display: flex;
+    gap: 3.25rem;
+
+    text-transform: capitalize;
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+  }
+
+  .stats-item__number
+  {
+    display: block;
+
+    color: var(--clr-neutral-200);
+    font-size: 1.8em;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+</style>

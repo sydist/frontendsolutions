@@ -1,0 +1,68 @@
+---
+import Page from "@layouts/page.astro";
+import ProfileCard from "@components/profile-card.astro";
+---
+
+<Page>
+  <Fragment slot="head">
+    <link rel="preload" href="fonts/kumbh_sans/400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/kumbh_sans/700.woff2" as="font" type="font/woff2" crossorigin>
+  </Fragment>
+  <main>
+    <!-- <ProfileCard /> -->
+  </main>
+</Page>
+
+<style is:global>
+  @font-face
+  {
+    font-family: body;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Kumbh Sans"),
+          url("/frontendsolutions/fonts/kumbh_sans/400.woff2") format("woff2"),
+          url("/frontendsolutions/fonts/kumbh_sans/400.woff") format("woff");
+  }
+
+  @font-face
+  {
+    font-family: body;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Kumbh Sans"),
+          url("/frontendsolutions/fonts/kumbh_sans/700.woff2") format("woff2"),
+          url("/frontendsolutions/fonts/kumbh_sans/700.woff") format("woff");
+  }
+
+  :root
+  {
+    --clr-primary-400: hsl(185, 75%, 39%);
+
+    --clr-neutral-200: hsl(229, 23%, 23%);
+    --clr-neutral-300: hsl(227, 10%, 46%);
+    --clr-neutral-400: hsl(0, 0%, 59%);
+
+    display: grid;
+    place-content: center;
+
+    /* x, y, size, repeat, image, color */
+    background: 
+      -15vmax             -30vmax               / 60vmax no-repeat url("/frontendsolutions/profile-card-component/bg-pattern-top.svg"), 
+      calc(100% + 15vmax)  calc(100% + 30vmax)  / 60vmax no-repeat url("/frontendsolutions/profile-card-component/bg-pattern-bottom.svg")
+      var(--clr-primary-400);
+    
+    color: var(--clr-neutral-300);
+  }
+
+  body
+  {
+    font-size: 1.125rem;
+  }
+
+  h1, h2, h3, .bold
+  {
+    color: var(--clr-neutral-200);
+    font-weight: 700;
+  }
+
+</style>

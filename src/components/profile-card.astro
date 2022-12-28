@@ -10,13 +10,13 @@ import Card from "./card.astro";
     <p class="profile-card__about"><span class="profile-card__name">Victor Crest</span> <span>26</span><br><span class="profile-card__location">London</span></p>     
   </section>
   <section aria-label="User statistics." class="border-box-sizing profile-card__stats">
-    <p>
+    <p class="stats-item">
       <b class="stats-item__number">80k</b> Followers
     </p>
-    <p>
+    <p class="stats-item">
       <b class="stats-item__number">803k</b> Likes
     </p>
-    <p>
+    <p class="stats-item">
       <b class="stats-item__number">1.4k</b> Photos
     </p>
   </section>
@@ -29,6 +29,7 @@ import Card from "./card.astro";
     border-radius: 16px;
     max-width: 21.875rem;
     text-align: center;
+    margin-inline: 1rem;
   }
   
 
@@ -70,10 +71,16 @@ import Card from "./card.astro";
 
     display: flex;
     gap: 3.25rem;
+    flex-wrap: wrap;
 
     text-transform: capitalize;
     font-size: 0.625rem;
     letter-spacing: 0.2em;
+  }
+
+  .stats-item
+  {
+    flex: 1 1;
   }
 
   .stats-item__number

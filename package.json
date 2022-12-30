@@ -3,7 +3,8 @@
 	"description": "Solutions to Frontend Mentor's challenges.",
 	"devDependencies": {
 		"astro": "^1.7.2",
-		"html-minifier-terser": "^7.1.0"
+		"html-minifier-terser": "^7.1.0",
+		"lightningcss-cli": "^1.17.1"
 	},
 	"homepage": "<https://sydist.github.io/frontendsolutions>",
 	"keywords": [

@@ -1,0 +1,44 @@
+---
+const rating = parseInt(Astro.props.rating) ?? 5;
+const subject = Astro.props.subject ?? "";
+---
+
+<div class="rating-card border-box-sizing" style={Astro.props.style ?? ""} >
+    <div aria-hidden="true" >
+        { 
+            Array.from(
+                { length: rating }, 
+                () => <img style="display: inline;" class="rating-card__stars" src="social-proof-section/icon-star.svg" alt="" />
+            )
+        }
+    </div>
+    <p>Rated { rating } Stars in { subject }</p>
+</div>
+
+<style>
+    .rating-card__stars
+    {
+        margin-inline: 0.25rem;
+    }
+
+    .rating-card
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        line-height: 1;
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--clr-primary-200);
+        background-color: var(--clr-neutral-800);
+
+        padding: 1rem;
+        border-radius: 8px;
+
+        overflow: hidden;
+		transform-origin: center bottom;
+        flex: 1;
+    }
+</style>

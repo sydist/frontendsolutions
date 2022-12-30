@@ -1,0 +1,56 @@
+<blockquote class="review-card" style={Astro.props.style}>
+    <div class="review-card__info">
+        <img class="review-card__avatar" src={Astro.props.avatar} alt="">
+        <div>
+            <cite class="review-card__name">{Astro.props.name}</cite>
+            <p class="review-card__status">Verified Buyer</p>
+        </div>
+    </div>
+
+    <p  >
+        &OpenCurlyDoubleQuote;
+        <slot />
+        &CloseCurlyDoubleQuote;
+    </p>
+</blockquote>
+
+<style is:global>
+    .review-card
+    {
+        border-radius: 0.5rem;
+        padding: 2.125rem;
+        padding-top: 2.625rem;
+
+        background: var(--clr-primary-200);
+        color: var(--clr-neutral-900);
+
+        font-weight: 500;
+        font-size: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        flex: 1;
+    }
+
+    .review-card__avatar
+    {
+        float: left;
+        border-radius: 50%;
+        max-width: 40px;
+        margin-right: 1.5rem;
+    }
+
+    .review-card__name
+    {
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .review-card__status
+    {
+        color: var(--clr-primary-600);
+        line-height: 1;
+    }
+</style>

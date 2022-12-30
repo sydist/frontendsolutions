@@ -40,6 +40,7 @@ html
 {
 	min-height: 100vh;
 	font-family: body, sans-serif;
+    scrollbar-gutter: stable both-edges;
 
 	text-rendering: optimizeSpeed;
 	shape-rendering: optimizeSpeed;
@@ -70,4 +71,25 @@ h1, h2, h3
 .relative
 {
 	position: relative;
+}
+
+@keyframes fadeIn
+{
+	0%
+	{
+		transform: translateY(12px);
+		opacity: 0;
+	}
+
+	100%
+	{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.fade-in
+{
+	animation: fadeIn 450ms ease var(--delay, 0ms) 1 normal forwards;
+	opacity: 0;
 }

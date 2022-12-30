@@ -1,4 +1,4 @@
-<article class="card">
+<article class="card fade-in">
 	<slot />
 </article>
 
@@ -17,21 +17,6 @@
 		gap: 1.5715rem;
 
 		transform-origin: center bottom;
-		animation: fadeIn 450ms ease forwards;
 	}
 
-	@keyframes fadeIn
-	{
-		from
-		{
-			transform: translateY(5%);
-			opacity: 0;
-		}
-
-		to
-		{
-			transform: none;
-			opacity: 1;
-		}
-	}
 </style>

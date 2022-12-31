@@ -1,0 +1,172 @@
+---
+import Page from "@layouts/page.astro";
+import FeatureCard from "@components/feature-card.astro";
+---
+
+<Page title="Four Card Feature Section">
+    <Fragment slot="head">
+        <link rel="preload" href="fonts/poppins/200.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="fonts/poppins/400.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/poppins/600.woff2" as="font" type="font/woff2" crossorigin>
+    </Fragment>
+    <main>
+        <section class="wrapper features" aria-label="Features">
+            <div class="features__text fade-in">
+                <h1><span style="font-weight: 200">Reliable, efficient delivery</span><br><strong>Powered by Technology</strong></h1>
+                <p>
+                    Our Artificial Intelligence powered tools use millions of project data points 
+                    to ensure that your project is successful
+                </p>
+            </div>
+            <div class="features__cards">
+                <FeatureCard 
+                    title="Supervisor"  
+                    description="Monitors activity to identify project roadblocks"
+                    icon="four-card-feature-section/icon-supervisor.svg"
+                    style="--accent:var(--clr-accent2-400);--delay:200ms;"
+                />
+                <FeatureCard 
+                    title="Team Builder"  
+                    description="Scans our talent network to create the optimal team for your project"
+                    icon="four-card-feature-section/icon-team-builder.svg"
+                    style="--accent:var(--clr-accent1-400);--delay:400ms;"
+                />
+                <FeatureCard 
+                    title="Karma"  
+                    description="Regularly evaluates our talent to ensure quality"
+                    icon="four-card-feature-section/icon-karma.svg"
+                    style="--accent:var(--clr-accent3-400);--delay:600ms;"
+                />
+                <FeatureCard 
+                    title="Calculator"  
+                    description="Uses data from past projects to provide better delivery estimates"
+                    icon="four-card-feature-section/icon-calculator.svg"
+                    style="--accent:var(--clr-accent4-400);--delay:800ms;"
+                />
+            </div>
+        </section>
+    </main>
+</Page>
+
+<style is:global>
+    @font-face
+    {
+        font-family: body;
+        src: local("Poppins ExtraLight"),
+            url("/frontendsolutions/fonts/poppins/200.woff2") format("woff2"),
+            url("/frontendsolutions/fonts/poppins/200.woff") format("woff");
+        font-weight: 200;
+    }
+
+    @font-face
+    {
+        font-family: body;
+        src: local("Poppins"),
+            url("/frontendsolutions/fonts/poppins/400.woff2") format("woff2"),
+            url("/frontendsolutions/fonts/poppins/400.woff") format("woff");
+        font-weight: 400;
+    }
+
+    @font-face
+    {
+        font-family: body;
+        src: local("Poppins SemiBold"),
+            url("/frontendsolutions/fonts/poppins/600.woff2") format("woff2"),
+            url("/frontendsolutions/fonts/poppins/600.woff") format("woff");
+        font-weight: 600;
+    }
+
+    :root
+    {
+        --clr-accent1-400: #ea5353;
+        --clr-accent2-400: #45d3d3;
+        --clr-accent3-400: #fcaf4a;
+        --clr-accent4-400: #549ef2;
+
+        --clr-neutral-400: #4c4e61;
+        --clr-neutral-600: #a3a5ae;
+        --clr-neutral-900: #fafafa;
+
+        background-color: var(--clr-neutral-900);
+        color: var(--clr-neutral-600);
+        line-height: 1.6;
+
+        display: grid;
+        place-content: center;
+        
+        box-sizing: border-box;
+        padding: 5.25rem;
+    }
+
+    p
+    {
+        font-size: 0.9375em;
+    }
+
+    h1, h2, h3
+    {
+        color: var(--clr-neutral-400);
+    }
+
+    .features
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+    }
+
+    .features__text
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        max-width: 50ch;  
+        text-align: center;
+    }
+
+    .features__cards
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    @media (min-width: 1024px)
+    {
+        .features__text
+        {
+            font-size: 1rem;
+        }
+
+        .features__text > h1
+        {
+            font-size: 2.4rem;
+        }
+
+        .features__cards
+        {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .features__cards > :first-child,
+        .features__cards > :last-child
+        {
+            grid-row: span 2;
+        }
+
+
+        .features__cards > :nth-child(3)
+        {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+
+    }
+
+</style>
